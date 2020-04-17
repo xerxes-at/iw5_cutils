@@ -32,8 +32,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>C:\Users\RektInator\AppData\Local\Plutonium-staging\storage\iw5\plugins</OutDir>
-    <TargetName>yeet</TargetName>
+    <OutDir>$(OutDir)</OutDir>
+    <TargetName>iw5_cutils</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
