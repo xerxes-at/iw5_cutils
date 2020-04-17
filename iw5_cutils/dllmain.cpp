@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "include/chaiscript/chaiscript.hpp"
 
-void hello_world()
+void wait(int delay)
 {
-    printf("hello world from my very first chai plugin!\n");
+    Sleep(delay);
 }
 
 extern "C"
@@ -13,7 +13,9 @@ extern "C"
     __declspec(dllexport) void on_initialize_context(const char* script, chaiscript::ChaiScript* chai)
     {
         // add stuff to chai context here
-        chai->add(chaiscript::fun(&hello_world), "hello_world");
+        chai->add(chaiscript::fun(&wait), "wait");
+        chai->add(chaiscript::fun(&wait), "delay");
+        chai->add(chaiscript::fun(&wait), "sleep");
     }
 
     // script:  name of the chaiscript script file being loaded
